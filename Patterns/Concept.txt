@@ -1,0 +1,2 @@
+Rows kitne print krne hai woh Outer Loop batayega --------
+Columns kitne print krne hai woh inner Loop batayega ||||||||||

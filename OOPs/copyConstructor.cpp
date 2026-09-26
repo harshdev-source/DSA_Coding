@@ -19,9 +19,17 @@ class Car{
         cout << "Copying original to new.. \n";
         name = original.name;
         color = original.color;
-        mileage = new int;
+        mileage = new int;      // Heap memory allocation deep copy
         *mileage = *original.mileage;
 
+    }
+
+    ~Car(){
+        cout << "Deleting Object.." << endl;
+        if(mileage != NULL){
+            delete mileage;
+            mileage = NULL;
+        }
     }
 };
 

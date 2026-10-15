@@ -11,10 +11,30 @@ void counter(){
 
 class Example{
 public:
-    int static const x = 0;
-
+    int static x;
 };
 
+// we should initialize outside of the class
+
+int Example::x = 0;
+
+
+
+// ----------------------------------------------------------------------- Static Object -----------------------------------------------------------------------
+
+class Example2{
+public:
+    Example2(){
+        cout << "Constructor Started...." << endl;
+    }
+
+
+    ~Example2(){
+        cout << "Destructor Started...." << endl;
+    }
+};
+
+// ----------------------------------------------------------------------- Pure Virtual Function -----------------------------------------------------------------------
 
 class Shape{
 public:
@@ -35,18 +55,23 @@ public:
     }
 };
 
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 int main(){
     
+    // ----------------------------------Abstraction objects----------------------------------
     Circle cir1;
     cir1.draw();
 
     Square sqr1;
     sqr1.draw();
 
+    // ---------------------------------- Static function called ------------------------------
     counter();
     counter();
     counter();
 
+    // ---------------------------------- Static object from Example class -----------------------
     Example eg1;
     Example eg2;
     Example eg3;
@@ -54,6 +79,14 @@ int main(){
     cout << eg2.x++ << endl;
     cout << eg3.x++ << endl;
 
+
+    // ---------------------------------- Static Object ----------------------------------
+    int a = 0;
+    if(a==0){
+        static Example2 eg1;
+    }
+
+    cout << "Code ending..\n";
 
     return 0;
 }

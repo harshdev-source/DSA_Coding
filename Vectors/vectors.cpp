@@ -6,11 +6,15 @@ int main(){
     vector<int> vec1 = {1, 2, 3, 4, 5};
     vector<int> vec2(10, -1);
 
+    cout << vec1[3] << endl;
+
     cout << vec1.size() << endl;
 
     for(int i=0; i<vec1.size(); i++){
-        cout << vec1[i] << endl;
+        cout << vec1[i] << " ";
     }
+
+    cout << endl;
 
     // Vector implementation in memory
 

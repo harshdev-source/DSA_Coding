@@ -4,7 +4,7 @@
 #include<vector>
 using namespace std;
 
-int lastOccur(vector<int>& nums,int target, int i){
+int lastOccur(vector<int>& nums, int target, int i){
     if(i == nums.size()){
         return -1;
     }
